@@ -1,0 +1,40 @@
+body {
+    background-color: whitesmoke;
+}
+
+.login-form {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1em;
+    max-width: 512px;
+    width: 416px;
+    text-align: center;
+    border: 1px solid lightgray;
+    background-color: white;
+    border-radius: 8px;
+}
+
+.login-form-input {
+    background-color: whitesmoke !important;
+}
+
+.login-form-input input {
+    background-color: whitesmoke;
+}
+
+@media only screen and (max-width: 486px) {
+    .login-form-input {
+        background-color: white;
+    }
+
+    .login-form {
+        border: 0;
+        top: 0;
+        left: 0;
+        width: 100%;
+        transform: translate(0%, 0%);
+        background-color: whitesmoke;
+    }
+}

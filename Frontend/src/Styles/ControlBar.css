@@ -1,0 +1,18 @@
+.control-bar {
+    position: sticky;
+    bottom: 0;
+    background: white;
+    width: 100%;
+    height: 5vh;
+    text-align: center;
+}
+
+.control-bar .anticon {
+    margin-top: 0.4em;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+.control-bar .anticon:hover {
+    color: black;
+}

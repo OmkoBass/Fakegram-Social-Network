@@ -1,0 +1,49 @@
+.profile {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    max-width: 935px;
+    width: 100%;
+}
+
+.profile-header {
+    margin: 2em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.profile-about {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 24px;
+    text-align: center;
+}
+
+.profile-about .anticon {
+    font-size: 2em;
+}
+
+.profile-about .anticon:hover {
+    color: black;
+}
+
+.audience {
+    cursor: pointer;
+}
+
+.profile .profile-header .audience {
+    cursor: pointer;
+}
+
+.profile-posts img {
+    display: block;
+    margin: auto auto 2em auto;
+    max-width: 280px;
+    width: 100%;
+}
+
+@media only screen and (max-width: 1024px) {
+    .profile-header .profile-picture {
+        margin: 2em auto 2em auto;
+    }
+}

@@ -1,0 +1,32 @@
+.header {
+    background-color: white !important;
+    border-bottom: 1px solid lightgray;
+}
+
+.header-search {
+    min-width: 200px;
+    margin-top: 1em !important;
+}
+
+.header-controls {
+    font-size: 2em;
+    height: 1.2em;
+}
+
+.header-controls .anticon {
+    cursor: pointer;
+}
+
+.header-controls .anticon:hover {
+    color: black;
+}
+
+.header-selected {
+    border-bottom: 3px solid black;
+}
+
+@media only screen and (max-width: 1024px) {
+    .header-search {
+        width: 25%;
+    }
+}

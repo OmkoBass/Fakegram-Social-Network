@@ -1,0 +1,31 @@
+.post {
+    height: 90%;
+    width: 100%;
+    max-width: 619px;
+}
+
+.post img {
+    height: auto;
+    width: 100%;
+}
+
+.post-controls {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 12fr;
+    grid-gap: 0.2em;
+    font-size: 2em;
+}
+
+.post-controls-save {
+    grid-column: 5/12;
+}
+
+.icon-hover:hover {
+    cursor: pointer;
+    color: black;
+    transition: 0.3s all ease-in-out;
+}
+
+.delete-icon {
+    font-size: 1.5em;
+}
