@@ -1,5 +1,7 @@
 # Fakegram Social Network
 
+### https://fakegramm.netlify.app/
+
 This is my software engineering project that i created using MERN stack.
 Fakegram is a social network insipired by already existing social network Instagram.
 
