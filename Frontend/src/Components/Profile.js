@@ -373,8 +373,8 @@ function Profile () {
                             :
                                 <Row>
                                     {
-                                        searchedUserPosts.map((post, index) => <Col md={ 7 } xs={ 22 }
-                                                                                    key={ index }
+                                        searchedUserPosts.map(post => <Col md={ 7 } xs={ 22 }
+                                                                                    key={ post._id }
                                                                                     style={ { margin: '1em' } }
                                         >
                                             <Post post={ post }
@@ -407,8 +407,8 @@ function Profile () {
                                     </div>
                                 </Row>
                                 :
-                                profilePosts.map((post, index) => <Col md={ 8 } xs={ 24 }
-                                                                       key={ index }
+                                profilePosts.map(post => <Col md={ 8 } xs={ 24 }
+                                                                       key={ post._id }
                                 >
                                     <Post
                                         removeFromList={ handleRemoveFromList }
