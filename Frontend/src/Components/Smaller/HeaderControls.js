@@ -7,7 +7,7 @@ import { HeartOutlined, HomeOutlined, SendOutlined, UserOutlined } from '@ant-de
 import Col from "antd/es/col";
 import Row from "antd/es/row";
 
-function HeaderControls () {
+function HeaderControls ({ mobile }) {
     let location = useLocation();
     let history = useHistory();
 
@@ -27,29 +27,31 @@ function HeaderControls () {
     }, [location]);
 
 
-    return <Row className='header-controls' justify='space-between'>
-        <Col>
+    return <Row className='header-controls' justify='space-between'
+        gutter={[12, 48]}
+    >
+        <Col span={mobile ? 24 : null} style={{ textAlign: 'center' }}>
             <HomeOutlined
                 onClick={ () => history.push('/') }
                 className={ controls === 0 ? 'header-selected' : null }
             />
         </Col>
 
-        <Col>
+        <Col span={mobile ? 24 : null} style={{ textAlign: 'center' }}>
             <SendOutlined
                 onClick={ () => history.push('/messages') }
                 className={ controls === 1 ? 'header-selected' : null }
             />
         </Col>
 
-        <Col>
+        <Col span={mobile ? 24 : null} style={{ textAlign: 'center' }}>
             <HeartOutlined
                 onClick={() => history.push('/notifications')}
                 className={ controls === 2 ? 'header-selected' : null }
             />
         </Col>
 
-        <Col>
+        <Col span={mobile ? 24 : null} style={{ textAlign: 'center' }}>
             <UserOutlined
                 onClick={ () => history.push('/profile') }
                 className={ controls === 3 ? 'header-selected' : null }
