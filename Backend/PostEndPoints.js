@@ -9,7 +9,8 @@ const moment = require('moment');
 
 const getLoggedInUsersPosts = async (req, res) => {
     Post.find({ postedBy: req.user.username })
-        .lean().exec((err, result) => {
+    .sort({ dateCreated: -1 })
+    .lean().exec((err, result) => {
         if (err)
             res.json(401);
         else {
