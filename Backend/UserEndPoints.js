@@ -102,32 +102,27 @@ const verifyEmail = async (req, res) => {
 }
 
 const loginUser = async (req, res) => {
-    User.findOne({ username: req.body.username })
-        .lean().exec(async (err, result) => {
-        if (err)
-            await res.json(500);
-        else {
-            if (result.verifiedEmail) {
-                try {
-                    if (await bcrypt.compare(req.body.password, result.password)) {
-                        const token = jwt.sign({
-                            _id: result._id,
-                            username: result.username
-                        }, process.env.TOKEN_SECRET);
+    const user = await User.findOne({ username: req.body.username }).lean().exec();
 
-                        res.header('token', token).send(token);
-                    } else {
-                        await res.json(401)
-                    }
-                } catch {
-                    await res.json(400);
-                }
+    if(user) {
+        if(user.verifiedEmail) {
+            if (await bcrypt.compare(req.body.password, user.password)) {
+                const token = jwt.sign({
+                    _id: user._id,
+                    username: user.username
+                }, process.env.TOKEN_SECRET);
+
+                res.header("token", token).send(token);
             } else {
-                res.json(403);
+                res.json(401);
             }
+        } else {
+            res.json(403);
         }
-    });
-}
+    } else {
+        res.json(401);
+    }
+};
 
 const getUsers = async (req, res) => {
     const users = await User.find().exec();
