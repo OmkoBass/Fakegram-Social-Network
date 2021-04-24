@@ -12,7 +12,7 @@ function HeaderDrawer ({ visible, close }) {
         placement='bottom'
     >
         <div onClick={ close }>
-            <HeaderControls/>
+            <HeaderControls mobile={true}/>
         </div>
     </Drawer>
 }
