@@ -91,6 +91,10 @@ app.get('/users/:id', verifyToken, UserEndPoints.getUserById);
 app.get('/users/search/:username', UserEndPoints.getUsernames);
 app.get('/users/username/:username', UserEndPoints.getUserByUsername);
 app.get('/posts/:username', PostEndPoints.getPostsForUser);
+// Could have just done this with 2 routes
+// One will search for the given user
+// The other will search for his posts
+// But i guess i didn't want to think that day when i implemented this
 app.get('/profile', verifyToken, UserEndPoints.getLoggedInUser);
 app.get('/profile/posts', verifyToken, PostEndPoints.getLoggedInUsersPosts);
 app.get('/profile/:postId/likedBy',verifyToken, PostEndPoints.getLikesForPost);
