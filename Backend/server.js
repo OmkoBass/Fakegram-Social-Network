@@ -69,10 +69,14 @@ const app = express();
 
 app.use(cors());
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 // This means that my posts dir is visible and can be accessed
 app.use('/posts', express.static('posts'));
 
-mongoose.connect(`mongodb+srv://FakegramChad:${process.env.FAKEGRAM_CLUSTER_PASSWORD}@fakegram-cluster.qpt2g.mongodb.net/fakegram?retryWrites=true&w=majority`)
+mongoose.connect(`mongodb+srv://FakegramChad:${process.env.FAKEGRAM_CLUSTER_PASSWORD}@fakegram-cluster.qpt2g.mongodb.net/fakegram?retryWrites=true&w=majority`, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+  })
     .then(() => {
         console.log('CONNECTED!');
     }).catch(() => {
