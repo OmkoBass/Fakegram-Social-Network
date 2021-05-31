@@ -1,5 +1,9 @@
 # Fakegram Social Network
 
+### Disclaimer:
+### This was my first fullstack project so keep in mind that this code can use ALOT of refacotring and smarter ways of implementing stuff.
+### I started this project in mid 2020 and finished it a couple of months later. Now, a year later I realized how much I have grown as a software engineer and a programmer that I could improve this codebase substantially.  
+
 ### https://fakegramm.netlify.app/
 
 This is my software engineering project that i created using MERN stack.
