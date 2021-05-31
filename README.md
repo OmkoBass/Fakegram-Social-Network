@@ -39,4 +39,4 @@ The users can:
 # Future improvements
 - Improvements can be done by paginating messages, likes, comments and posts for profiles
 - Using socket.io for responsive notifications and messaging.
-- Refactor this thing. 
+- Refactoring is needed
